@@ -10,6 +10,7 @@ public class InputFormTest extends Base{
 	public void verifyInputForm()
 	{
 		InputFormPage inputFormPage=new InputFormPage(driver);
+		inputFormPage.formsubmit();
 		inputFormPage.details();
 		inputFormPage.clickSubmitButton();
 	}
