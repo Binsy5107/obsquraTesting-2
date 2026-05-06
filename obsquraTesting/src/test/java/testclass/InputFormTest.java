@@ -11,7 +11,7 @@ public class InputFormTest extends Base{
 	{
 		InputFormPage inputFormPage=new InputFormPage(driver);
 		inputFormPage.formsubmit();
-		inputFormPage.details();
+		inputFormPage.enterDetails("arun", "babu","arunbabu","trivandrum", "kerala","695013");
 		inputFormPage.clickSubmitButton();
 	}
 

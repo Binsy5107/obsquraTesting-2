@@ -13,7 +13,7 @@ public class InputFormPage {
 		PageFactory.initElements(driver, this);
 	}
 @FindBy(xpath="//input[@id='validationCustom01']")private WebElement firstname;
-@FindBy(xpath="//input[@id='validationCustom02']")private WebElement lasttname;
+@FindBy(xpath="//input[@id='validationCustom02']")private WebElement lastname;
 @FindBy(xpath="//input[@id='validationCustomUsername']")private WebElement username;
 @FindBy(xpath="//input[@id='validationCustom03']")private WebElement city;
 @FindBy(xpath="//input[@id='validationCustom04']")private WebElement state;
@@ -26,16 +26,16 @@ public class InputFormPage {
 		driver.navigate().to("https://selenium.qabible.in/form-submit.php");
 	}
 	
-	public void details()
-	{
-		firstname.sendKeys("arun");
-		lasttname.sendKeys("babu");
-		username.sendKeys("arunbabu");
-		city.sendKeys("trivandrum");
-		state.sendKeys("kerala");
-		zip.sendKeys("695013");
-	checkIn.click();
 	
+	public void enterDetails(String first, String last, String user, String cityName, String stateName, String zipCode)
+	{
+	    firstname.sendKeys(first);
+	    lastname.sendKeys(last);
+	    username.sendKeys(user);
+	    city.sendKeys(cityName);
+	    state.sendKeys(stateName);
+	    zip.sendKeys(zipCode);
+	    checkIn.click();
 	}
 	 public void clickSubmitButton() {
 	        button.click(); 
